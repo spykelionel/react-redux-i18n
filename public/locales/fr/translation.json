@@ -1,0 +1,20 @@
+{
+  "landing": {
+    "title": "Bienvenue sur votre modèle React épique",
+    "description": "Un modèle puissant React-TS avec i18n, TailwindCSS, Framer Motion et Redux!",
+    "darkMode": "Passer au mode sombre",
+    "lightMode": "Passer au mode clair",
+    "feature1": {
+      "title": "Intégration de TailwindCSS",
+      "description": "Intégration transparente avec TailwindCSS pour un développement rapide de l'interface utilisateur."
+    },
+    "feature2": {
+      "title": "Support i18n",
+      "description": "Ajout facile du support multilingue avec i18n."
+    },
+    "feature3": {
+      "title": "Animations Framer Motion",
+      "description": "Animations fluides avec Framer Motion."
+    }
+  }
+}

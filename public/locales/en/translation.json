@@ -1,0 +1,20 @@
+{
+  "landing": {
+    "title": "Welcome to Your Epic React Template",
+    "description": "A powerful React-TS template with i18n, TailwindCSS, Framer Motion, and Redux!",
+    "darkMode": "Switch to Dark Mode",
+    "lightMode": "Switch to Light Mode",
+    "feature1": {
+      "title": "TailwindCSS Integration",
+      "description": "Seamless integration with TailwindCSS for rapid UI development."
+    },
+    "feature2": {
+      "title": "i18n Support",
+      "description": "Easy to add multi-language support with i18n."
+    },
+    "feature3": {
+      "title": "Framer Motion Animations",
+      "description": "Smooth animations with Framer Motion."
+    }
+  }
+}
