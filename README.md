@@ -21,8 +21,6 @@ git clone https://github.com/yourusername/redux-react-i18n-tailwind-template.git
 cd redux-react-i18n-tailwind-template
 ```
 
-````
-
 ### 2. Install dependencies
 
 Install the required dependencies using either **npm** or **yarn**.
@@ -100,4 +98,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ---
 
 This template is designed to get you started quickly with **Redux**, **i18n**, and **TailwindCSS** in a modern React app. Feel free to adapt it to fit your project's needs!
-````
