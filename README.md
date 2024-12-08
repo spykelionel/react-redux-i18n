@@ -1,113 +1,103 @@
-# Learnoso (NEW)
+# Redux React i18n TailwindCSS Template
 
-This the main learnoso project codebase. Other clients exists!
+This is a React TypeScript template repository configured with **Redux** for state management, **i18n** (internationalization) for multi-language support, and **TailwindCSS** for styling. It serves as a great starting point for building modern, responsive, and localized web applications.
 
-## Repository Structure
+## Features
 
-Do abide to this repository structure. Ask any questions if you have any
+- **Redux**: Centralized state management for handling the application state.
+- **i18n**: Support for multiple languages, easily extendable to add more.
+- **TailwindCSS**: Utility-first CSS framework for fast, responsive design.
+- **Dark/Light Mode**: Toggle between dark and light themes.
+- **Responsive Layout**: Optimized for mobile and desktop views with TailwindCSS.
 
-src/ </br>
-├── app/ </br>
-│ ├── store.ts // Central Redux store configuration </br>
-│ └── rootReducer.ts // Combine all reducers from different domains here </br>
-├── features/ </br>
-│ ├── user/ </br>
-│ │ ├── components/ </br>
-│ │ │ ├── UserProfile.tsx </br>
-│ │ │ └── UserList.tsx </br>
-│ │ ├── pages/ </br>
-│ │ │ └── UserDashboard.tsx </br>
-│ │ ├── redux/ </br>
-│ │ │ ├── userSlice.ts // Redux slice for user </br>
-│ │ │ └── userSelectors.ts // Optional selectors </br>
-│ │ ├── userApi.ts </br>
-│ │ ├── user.types.ts </br>
-│ │ └── index.ts </br>
-│ ├── liveClass/ </br>
-│ │ ├── components/ </br>
-│ │ │ ├── LiveClassRoom.tsx </br>
-│ │ │ └── LiveClassCard.tsx </br>
-│ │ ├── pages/ </br>
-│ │ │ └── LiveClassSchedule.tsx </br>
-│ │ ├── redux/ </br>
-│ │ │ ├── liveClassSlice.ts // Redux slice for live classes </br>
-│ │ │ └── liveClassSelectors.ts </br>
-│ │ ├── liveClassApi.ts </br>
-│ │ ├── liveClass.types.ts </br>
-│ │ └── index.ts </br>
-│ ├── ide/ </br>
-│ │ ├── components/ </br>
-│ │ │ ├── IDEEditor.tsx </br>
-│ │ │ └── IDEFileList.tsx </br>
-│ │ ├── pages/ </br>
-│ │ │ └── StudentIDE.tsx </br>
-│ │ ├── redux/ </br>
-│ │ │ └── ideSlice.ts // Redux slice for IDE </br>
-│ │ ├── ideApi.ts </br>
-│ │ ├── ide.types.ts </br>
-│ │ └── index.ts </br>
-│ └── messaging/ </br>
-│ ├── components/ </br>
-│ │ ├── MessageList.tsx </br>
-│ │ └── ChatInput.tsx </br>
-│ ├── pages/ </br>
-│ │ └── ChatRoom.tsx </br>
-│ ├── redux/ </br>
-│ │ └── messagingSlice.ts // Redux slice for messaging </br>
-│ ├── messagingApi.ts </br>
-│ ├── messaging.types.ts </br>
-│ └── index.ts </br>
-├── pages/ </br>
-│ ├── Dashboard.tsx </br>
-│ ├── StudentDashboard.tsx </br>
-│ ├── TutorDashboard.tsx </br>
-│ ├── LiveClassSchedule.tsx </br>
-│ ├── LiveClassDetail.tsx </br>
-│ ├── StudentIDE.tsx </br>
-│ ├── ChatRoom.tsx </br>
-│ └── NotFound.tsx </br>
-├── types/ </br>
-│ ├── api.d.ts </br>
-│ ├── user.d.ts </br>
-│ ├── liveClass.d.ts </br>
-│ ├── ide.d.ts </br>
-│ ├── messaging.d.ts </br>
-│ └── common.d.ts </br>
-├── App.tsx </br>
-├── index.tsx </br>
-└── routes.tsx </br>
+## Getting Started
 
-## Setting Up the Docker Environment
+### 1. Clone the repository
 
-### Prerequisites
+Clone the repository to your local machine:
 
-- **Docker**: Ensure Docker is installed and running on your machine.
-- **Docker Compose**: Ensure Docker Compose is installed.
+```bash
+git clone https://github.com/yourusername/redux-react-i18n-tailwind-template.git
+cd redux-react-i18n-tailwind-template
+```
 
-### Setup Scripts
+````
 
-You can use the provided setup scripts for your operating system:
+### 2. Install dependencies
 
-- **For Bash (Linux/MacOS)**: Use `setup.sh`.
-- **For Windows PowerShell**: Use `setup.ps1`.
+Install the required dependencies using either **npm** or **yarn**.
 
-#### Bash Setup
+With **npm**:
 
-1. **Run the Setup Script**:
+```bash
+npm install
+```
 
-   ```bash
-   ./setup.sh
-   ```
+With **yarn**:
 
-#### PowerShell Setup
+```bash
+yarn install
+```
 
-1. **Run the Setup Script**:
+### 3. Start the development server
 
-   ```powershell
-   .\setup.ps1
-   ```
+Run the development server to launch the application locally.
 
-### Script Details
+With **npm**:
 
-- **`setup.sh`**: This script will pull the latest Docker image, build the application (if needed), and run the Docker container on Linux or macOS.
-- **`setup.ps1`**: This script will pull the latest Docker image, build the application (if needed), and run the Docker container on Windows.
+```bash
+npm start
+```
+
+With **yarn**:
+
+```bash
+yarn start
+```
+
+The application will be available at [http://localhost:3000](http://localhost:3000).
+
+## Configuration
+
+### i18n (Internationalization)
+
+The project uses **react-i18next** for handling translations. You can extend it by adding more languages in the `src/locales` directory. Currently, **English** (`en`) and **French** (`fr`) are supported.
+
+1. **Adding a new language**:
+   - Create a new JSON file in `src/locales/{languageCode}.json` (e.g., `de.json` for German).
+   - Add the necessary translations to the new file.
+   - Update the i18n configuration in `src/i18n.ts` to include your new language.
+
+### Redux (State Management)
+
+The app uses **Redux** to manage the global state, such as the theme (dark/light mode). The state is accessible throughout the application and can be easily extended to manage other app-level states.
+
+1. **Adding new state slices**:
+   - Create a new slice file under `src/store/`.
+   - Use **Redux Toolkit**'s `createSlice` to manage the state.
+   - Don't forget to add your new slice to the Redux store in `src/store/index.ts`.
+
+### TailwindCSS
+
+The project is configured with **TailwindCSS** for utility-first CSS styling. Tailwind provides responsive design utilities and custom styling classes.
+
+1. **Customizing TailwindCSS**:
+   - Modify the `tailwind.config.js` file to extend the theme, add custom colors, or modify the default configuration.
+   - You can also add custom CSS classes in the `src/styles` directory if needed.
+
+## Contributing
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+This template is designed to get you started quickly with **Redux**, **i18n**, and **TailwindCSS** in a modern React app. Feel free to adapt it to fit your project's needs!
+````
